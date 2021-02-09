@@ -1,6 +1,7 @@
 body {
     margin: 0;
     line-height: 1.4;
+    font-family: 'Poppins', sans-serif;
 }
 
 #img-container {
@@ -37,20 +38,23 @@ body {
     width: 55vw;
     display: flex;
     flex-direction: column;
-    z-index: 1000000;
+    z-index: 30;
 }
 
 h1 {
     margin-top: 33vh;
     color: white;
-    font-size: 40px;
+    font-size: 44px;
+    margin-bottom: 15px;
 }
 
 #header-h2 {
     color: white;
-    text-transform: uppercase;
-    font-size: 50px;
+    /* text-transform: uppercase; */
+    font-size: 35px;
     margin-top: 0px;
+    font-weight: lighter;
+    font-style: italic;
 }
 
 #nav-container {
@@ -59,15 +63,16 @@ h1 {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(12, 12, 12, 0.2);
-    z-index: 10000;
+    background-color: rgba(12, 12, 12, 0.5);
+    z-index: 40;
+    position: fixed;
 }
 
 #navbar {
     display: grid;
     grid-template-columns: 4fr 1fr 1fr 1fr;
     margin: 0px;
-    height: 80px;
+    height: 60px;
     align-items: center;
 }
 
@@ -75,22 +80,22 @@ h1 {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 22px;
-    z-index: 200000;
+    font-size: 20px;
+    z-index: 50;
     justify-self: center;
-    margin-bottom: 20px;
 }
 
 #projects {
     padding-top: 60px;
-    background: #424B54;
+    /* background: #424B54; */
+    background: #303841;
     padding-bottom: 45px;
 }
 
 #main-h2 {
     text-transform: uppercase;
     color: white;   
-    font-size: 36px;
+    font-size: 34px;
     text-align: center;
     border-bottom: 2px solid white;
     max-width: 230px;
@@ -100,12 +105,12 @@ h1 {
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 450px;
     margin: 40px 60px;
     gap: 40px;
 }
 
 .project-link {
+    grid-template-rows: 385px 75px;
     display: grid;
     box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
 }
@@ -113,21 +118,269 @@ h1 {
 .project-img {
     object-fit: cover;
     width: 100%;
-    height: 380px;
+    height: 385px;
     margin-bottom: 0px;
+}
+
+.project-title-container {
+    text-align: center;
+    background: #DB4357;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .project-title {
     font-size: 22px;
-    text-align: center;
-    background: #DB4357;
-    margin: 0px;
-    padding: 22px;
     color: white;
     border-radius: 0px 0px 3px 3px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 a {
     text-decoration: none;
 }
 
+.contact-section {
+    background: white;
+    text-align: center;
+}
+
+.contact-section-header {
+    display: block;
+    margin: auto;
+    font-size: 50px;
+    color: #303841;
+    font-weight: bold;
+    padding-top: 70px;
+}
+
+.contact-section {
+    padding-bottom: 70px;
+}
+
+.contact-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+
+.contact-links {
+    padding-top: 35px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#github_link {
+    color: #303841;
+    padding-right: 40px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#codepen_link {
+    color: #303841;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1160px) {
+    .project-link {
+        grid-template-rows: 320px 50px;
+    }
+    .project-img {
+        height: 320px;
+    }
+    .project-title {
+        margin: 10px 10px;
+    }
+    #projects {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .project-link {
+        grid-template-rows: 290px 40px;
+    }
+    .project-img {
+        height: 290px;
+    }
+    .project-title {
+        margin: 5px 5px;
+    }
+}
+
+@media (max-width: 870px) {
+    .project-link {
+        grid-template-rows: 240px 30px;
+    }
+    .project-img {
+        height: 240px;
+    }
+    .project-title {
+        margin: 2px 4px;
+        font-size: 18px;
+    }
+    .projects-grid {
+        margin: 30px 30px;
+        gap: 35px;
+    }
+    #main-h2 {
+        font-size: 28px;
+    }
+    .nav-link {
+        font-size: 16px;
+        margin: 0px;
+    }
+    #nav-container {
+        height: 45px;
+    }
+    #navbar {
+        height: 45px;
+    }
+    .contact-section-header {
+        padding-top: 38px;
+        font-size: 40px;
+    }
+    .contact-section {
+        padding-bottom: 40px;
+    }
+    .contact-icon {
+        width: 35px;
+        height: 35px;
+        margin-right: 5px;
+    }
+    .contact-links {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 740px){
+    #navbar {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        height: 50px;
+    }
+    #nav-container {
+        height: 50px;
+    }
+    h1 {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+    #header-h2 {
+        font-size: 28px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+        margin: 40px 60px;
+    }
+    .project-link {
+        grid-template-rows: 315px 50px;
+    }
+    .project-img {
+        height: 315px;
+        margin-bottom: 0px;
+    }
+    .project-title {
+        margin: 12px 5px;
+    }
+}
+
+@media (max-width: 640px) {
+    #navbar {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: 50px;
+    }
+    #header-content {
+        width: 73vw;
+    }
+    h1 {
+        margin-top: 33vh;
+        color: white;
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    #header-h2 {
+        font-size: 30px;
+        margin-top: 0px;
+    }
+    .project-link {
+        grid-template-rows: 200px 50px;
+    }
+    .project-img {
+        height: 200px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+        margin: 40px 40px;
+    }
+    #projects {
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 425px) {
+    #navbar {
+        grid-template-columns: repeat(3, auto);
+    }
+    #nav-container {
+        height: 50px;
+    }
+    .spacer {
+        display: none;
+    }
+    .nav-link {
+        font-size: 19px;
+    }
+    h1 {
+        margin-top: 36vh;
+        color: white;
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    #header-h2 {
+        font-size: 22px;
+        margin-top: 0px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+        margin: 40px 30px;
+    }
+    .project-link {
+        grid-template-rows: 235px 50px;
+    }
+    .project-img {
+        height: 235px;
+    }
+    .contact-section-header {
+        padding-top: 25px;
+        font-size: 30px;
+    }
+    .contact-icon {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
+    .contact-links {
+        padding-top: 15px;
+    }
+    #github_link {
+        padding-right: 20px;
+        font-size: 23px;
+    }
+    #codepen_link {
+        font-size: 23px;
+    }
+    .contact-section {
+        padding-bottom: 25px;
+    }
+}

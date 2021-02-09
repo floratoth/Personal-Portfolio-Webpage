@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../CSS/styles.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -17,13 +20,13 @@
             </div>
             <div id="header-content">
                 <h1>Hello, I'm Flora</h1>
-                <h2 id="header-h2">Frontend Developer</h2>
+                <h2 id="header-h2">frontend developer</h2>
             </div>
             <div id="nav-container">
                 <nav id="navbar">
-                    <div></div>
+                    <div class="spacer"></div>
                     <a class="nav-link" href="#welcome-section">About</a>
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                    <a class="nav-link" href="#projects">Portfolio</a>
                     <a class="nav-link" href="#contact">Contact</a>
                 </nav>
             </div>
@@ -36,23 +39,47 @@
             <div class="projects-grid">
                 <a href="https://codepen.io/floratoth/pen/ZEpPdze" class="project-link" target="_blank">
                     <img class="project-img" src="../Pictures/Tribute_page.png" alt="photo of tribute project">
-                    <p class="project-title">Tribute page</p>
+                    <div class="project-title-container">
+                        <p class="project-title">Tribute page</p>
+                    </div>
                 </a>
                 <a href="https://codepen.io/floratoth/pen/MWbgJwx" class="project-link" target="_blank">
                     <img class="project-img" src="../Pictures/Survey_form.png" alt="photo of survey form">
-                    <p class="project-title">Survey Form</p>
+                    <div class="project-title-container">
+                        <p class="project-title">Survey Form</p>
+                    </div>
                 </a>
                 <a href="https://codepen.io/floratoth/pen/gOLPqJZ" class="project-link" target="_blank">
                     <img class="project-img" src="../Pictures/Technical_documentation_page.png" alt="photo of technical documentation page">
-                    <p class="project-title">Technical Documentation Page</p>
+                    <div class="project-title-container">
+                        <p class="project-title">Technical Documentation Page</p>
+                    </div>
                 </a>
                 <a href="https://codepen.io/floratoth/pen/yLVNBZo" class="project-link" target="_blank">
                     <img class="project-img" src="../Pictures/Product_landing_page.png" alt="photo of product landing page">
-                    <p class="project-title">Product Landing Page</p>
+                    <div class="project-title-container">
+                        <p class="project-title">Product Landing Page</p>
+                    </div>
                 </a>
             </div>
         </div>
     </main>
+
+    <div class="contact-section" id="contact">
+        <div class="contact-section-header">
+            Let's work together!
+        </div>
+        <div class="contact-links">
+            <a id="github_link" href="https://github.com/floratoth" target="_blank">
+                <img class="contact-icon" src="../Pictures/github_icon.png" alt="GitHub icon">
+                GitHub
+            </a>
+            <a id="codepen_link" href="https://codepen.io/your-work/" target="_blank">
+                <img class="contact-icon" src="../Pictures/codepen_icon.png" alt="CodePen icon">
+                CodePen
+            </a>
+        </div>
+    </div>
     
 </body>
 </html>
